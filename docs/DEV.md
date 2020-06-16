@@ -32,11 +32,22 @@ The "Plugin Test" is an additional integration test which verifies plugin featur
 mvn clean install
 ```  
 
-#### Ruling Test
-The "Ruling Test" is a special integration test which launches the analysis of a large code base, saves the issues created by the plugin in report files, and then compares those results to the set of expected issues (stored as JSON files). To launch ruling test:
+#### Ruling Tests
+The `RulingTest`s are special integration tests which launch the analysis of a large code base, save the issues created by the plugin in report files, and then compare those results to the set of expected issues (stored as JSON files). To launch both JS/TS ruling tests:
 ```
 cd its/ruling
-mvn clean install
+mvn -DforkCount=1 -DreuseForks=false clean install
+```
+Note that they must run sequentially (no two SonarQube instances should run at same time) and in separate forked JVMs (once stopped, an `orchestrator` instance cannot be reused).
+To run `JavaScriptRulingTest` only:
+```
+cd its/ruling
+mvn clean -Dtest=org.sonar.javascript.it.JavaScriptRulingTest test
+```
+and, analogously, for `TypeScriptRulingTest`:
+```
+cd its/ruling
+mvn clean -Dtest=org.sonar.javascript.it.TypeScriptRulingTest test
 ```
 
 This test gives you the opportunity to examine the issues created by each rule and make sure they're what you expect. You can inspect new/lost issues checking SonarQube UI (use DEBUG mode and put a breakpoint on assertion) at the end of analysis. If everything looks good to you, you can copy the file with the actual issues located at
