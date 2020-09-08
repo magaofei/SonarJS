@@ -20,6 +20,7 @@
 package org.sonar.javascript.checks;
 
 import org.sonar.check.Rule;
+import org.sonar.plugins.javascript.api.EslintBasedCheck;
 import org.sonar.plugins.javascript.api.JavaScriptRule;
 import org.sonar.plugins.javascript.api.TypeScriptRule;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
@@ -28,7 +29,7 @@ import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 @TypeScriptRule
 @DeprecatedRuleKey(ruleKey = "ConstructorFunctionsForSideEffects")
 @Rule(key = "S1848")
-public class ConstructorFunctionsForSideEffectsCheck extends EslintBasedCheck {
+public class ConstructorFunctionsForSideEffectsCheck implements EslintBasedCheck {
 
   @Override
   public String eslintKey() {

@@ -22,6 +22,7 @@ package org.sonar.javascript.checks;
 import java.util.Collections;
 import java.util.List;
 import org.sonar.check.Rule;
+import org.sonar.plugins.javascript.api.EslintBasedCheck;
 import org.sonar.plugins.javascript.api.JavaScriptRule;
 import org.sonar.plugins.javascript.api.TypeScriptRule;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
@@ -30,7 +31,7 @@ import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 @TypeScriptRule
 @DeprecatedRuleKey(ruleKey = "StrictMode")
 @Rule(key = "S1539")
-public class StrictModeCheck extends EslintBasedCheck {
+public class StrictModeCheck implements EslintBasedCheck {
 
   @Override
   public List<Object> configurations() {

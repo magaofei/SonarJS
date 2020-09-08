@@ -20,6 +20,7 @@
 package org.sonar.javascript.checks;
 
 import org.sonar.check.Rule;
+import org.sonar.plugins.javascript.api.EslintBasedCheck;
 import org.sonar.plugins.javascript.api.JavaScriptRule;
 import org.sonar.plugins.javascript.api.TypeScriptRule;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
@@ -28,7 +29,7 @@ import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 @TypeScriptRule
 @DeprecatedRuleKey(ruleKey = "FunctionDefinitionInsideLoop")
 @Rule(key = "S1515")
-public class FunctionDefinitionInsideLoopCheck extends EslintBasedCheck {
+public class FunctionDefinitionInsideLoopCheck implements EslintBasedCheck {
 
   @Override
   public String eslintKey() {

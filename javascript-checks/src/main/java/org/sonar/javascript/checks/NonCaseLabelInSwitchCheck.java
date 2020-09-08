@@ -20,13 +20,14 @@
 package org.sonar.javascript.checks;
 
 import org.sonar.check.Rule;
+import org.sonar.plugins.javascript.api.EslintBasedCheck;
 import org.sonar.plugins.javascript.api.JavaScriptRule;
 import org.sonar.plugins.javascript.api.TypeScriptRule;
 
 @JavaScriptRule
 @TypeScriptRule
 @Rule(key = "S1219")
-public class NonCaseLabelInSwitchCheck extends EslintBasedCheck {
+public class NonCaseLabelInSwitchCheck implements EslintBasedCheck {
 
   @Override
   public String eslintKey() {

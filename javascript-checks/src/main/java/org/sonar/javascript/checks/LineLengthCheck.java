@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
+import org.sonar.plugins.javascript.api.EslintBasedCheck;
 import org.sonar.plugins.javascript.api.JavaScriptRule;
 import org.sonar.plugins.javascript.api.TypeScriptRule;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
@@ -33,7 +34,7 @@ import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 @TypeScriptRule
 @DeprecatedRuleKey(ruleKey = "LineLength")
 @Rule(key = "S103")
-public class LineLengthCheck extends EslintBasedCheck  {
+public class LineLengthCheck implements EslintBasedCheck {
 
   private static final int DEFAULT_MAXIMUM_LINE_LENGTH = 180;
 

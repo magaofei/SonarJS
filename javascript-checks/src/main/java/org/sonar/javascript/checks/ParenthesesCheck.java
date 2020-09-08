@@ -20,6 +20,7 @@
 package org.sonar.javascript.checks;
 
 import org.sonar.check.Rule;
+import org.sonar.plugins.javascript.api.EslintBasedCheck;
 import org.sonar.plugins.javascript.api.JavaScriptRule;
 import org.sonar.plugins.javascript.api.TypeScriptRule;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
@@ -28,7 +29,7 @@ import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 @JavaScriptRule
 @DeprecatedRuleKey(ruleKey = "Parentheses")
 @Rule(key = "S1110")
-public class ParenthesesCheck extends EslintBasedCheck {
+public class ParenthesesCheck implements EslintBasedCheck {
 
   @Override
   public String eslintKey() {
