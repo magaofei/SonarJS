@@ -35,6 +35,10 @@ public interface EslintBasedCheck extends JavaScriptCheck {
     return Collections.emptyList();
   }
 
+  default void contextAware(CheckContext checkContext) {
+
+  }
+
   @Override
   default List<Issue> scanFile(TreeVisitorContext context) {
     return Collections.emptyList();
