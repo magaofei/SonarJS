@@ -136,6 +136,7 @@ import { rule as tooManyBreakOrContinueInLoop } from './too-many-break-or-contin
 import { rule as unusedImport } from './unused-import';
 import { rule as updatedConstVar } from './updated-const-var';
 import { rule as updatedLoopCounter } from './updated-loop-counter';
+import { rule as uselessStringOperation } from './useless-string-operation';
 import { rule as useTypeAlias } from './use-type-alias';
 import { rule as variableName } from './variable-name';
 import { rule as voidUse } from './void-use';
@@ -263,6 +264,7 @@ ruleModules['too-many-break-or-continue-in-loop'] = tooManyBreakOrContinueInLoop
 ruleModules['unused-import'] = unusedImport;
 ruleModules['updated-const-var'] = updatedConstVar;
 ruleModules['updated-loop-counter'] = updatedLoopCounter;
+ruleModules['useless-string-operation'] = uselessStringOperation;
 ruleModules['use-type-alias'] = useTypeAlias;
 ruleModules['variable-name'] = variableName;
 ruleModules['void-use'] = voidUse;
