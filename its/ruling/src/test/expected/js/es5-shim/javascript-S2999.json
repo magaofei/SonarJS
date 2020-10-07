@@ -1,0 +1,14 @@
+{
+'es5-shim:tests/lib/jasmine.js':[
+2270,
+2271,
+],
+'es5-shim:tests/spec/s-function.js':[
+104,
+114,
+123,
+135,
+140,
+149,
+],
+}
