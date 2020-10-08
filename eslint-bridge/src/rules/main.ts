@@ -115,6 +115,7 @@ import { rule as noVariableUsageBeforeDeclaration } from './no-variable-usage-be
 import { rule as noWeakKeys } from './no-weak-keys';
 import { rule as noWildcardImport } from './no-wildcard-import';
 import { rule as nonExistentOperator } from './non-existent-operator';
+import { rule as nonExistentProperty } from './non-existent-property';
 import { rule as osCommand } from './os-command';
 import { rule as preferDefaultLast } from './prefer-default-last';
 import { rule as preferPromiseShorthand } from './prefer-promise-shorthand';
@@ -247,6 +248,7 @@ ruleModules['no-variable-usage-before-declaration'] = noVariableUsageBeforeDecla
 ruleModules['no-wildcard-import'] = noWildcardImport;
 ruleModules['no-weak-keys'] = noWeakKeys;
 ruleModules['non-existent-operator'] = nonExistentOperator;
+ruleModules['non-existent-property'] = nonExistentProperty;
 ruleModules['os-command'] = osCommand;
 ruleModules['prefer-default-last'] = preferDefaultLast;
 ruleModules['prefer-promise-shorthand'] = preferPromiseShorthand;
